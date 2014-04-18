@@ -29,7 +29,7 @@ if (!defined('DS')) {
 if (!defined('ROOT')) {
 	define('ROOT', dirname(dirname(dirname(__FILE__))));
 }
-
+// var_dump(ROOT);exit;
 /**
  * The actual directory name for the "app".
  *
@@ -37,8 +37,11 @@ if (!defined('ROOT')) {
 if (!defined('APP_DIR')) {
 	define('APP_DIR', basename(dirname(dirname(__FILE__))));
 }
+// if (!defined('TMP')) {
+// 	define('TMP', '/data/appdata/csplat');
+// }
 if (!defined('TMP')) {
-	define('TMP', '/data/appdata/csplat');
+	define('TMP', '/Users/light/tmp/csplat/');
 }
 
 /**
