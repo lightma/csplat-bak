@@ -28,6 +28,7 @@ App::uses('EavAppModel', 'Eav.Model');
  *
   */
 class EntityType extends EavAppModel {
+    public $useTable = 'eav_entity_types';
 
 /**
  * Display field
@@ -68,8 +69,8 @@ class EntityType extends EavAppModel {
  * @var array
  */
     public $hasMany = array(
-        'Attribute' => array(
-            'className' => 'Attribute',
+        'EntityAttribute' => array(
+            'className' => 'EntityAttribute',
             'foreignKey' => 'entity_type_id',
             'dependent' => false,
         )

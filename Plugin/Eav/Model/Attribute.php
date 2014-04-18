@@ -27,7 +27,7 @@ App::uses('EavAppModel', 'Eav.Model');
  *
  */
 class Attribute extends EavAppModel {
-    public $uses = 'Eav.Attribute';
+    public $useTable = 'eav_attributes';
 /**
  * Display field
  *
@@ -73,28 +73,11 @@ class Attribute extends EavAppModel {
     );
 
     //The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * belongsTo associations
- *
- * @var array
- */
-    public $belongsTo = array(
-        'EntityType' => array(
-            'className' => 'EntityType',
-            'foreignKey' => 'entity_type_id',
-            'conditions' => '',
-            'fields' => '',
-            'order' => ''
-        ),
-        'DataType' => array(
-            'className' => 'DataType',
-            'foreignKey' => 'data_type_id',
-            'conditions' => '',
-            'fields' => '',
-            'order' => ''
+    public $hasMany = array(
+        'EntityAttribute' => array(
+            'className' => 'Eav.EntityAttribute',
+            'foreignKey' => 'attribute_id',
+            'dependent' => false
         )
     );
-
-
 }

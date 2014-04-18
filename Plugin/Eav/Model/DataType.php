@@ -65,8 +65,8 @@ class DataType extends EavAppModel {
  * @var array
  */
     public $hasMany = array(
-        'Eav.Attribute' => array(
-            'className' => 'Attribute',
+        'Attribute' => array(
+            'className' => 'Eav.Attribute',
             'foreignKey' => 'data_type_id',
             'dependent' => false,
         )
